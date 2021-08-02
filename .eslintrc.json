@@ -1,0 +1,44 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2019
+    },
+    "rules": {
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "comma-dangle": [
+            "error"
+        ],
+        "comma-style": "error",
+        "space-before-blocks": [
+            "error",
+            "never"
+        ],
+        "yoda": "error",
+        "object-curly-spacing": [
+            "error",
+            "never"
+        ],
+        "spaced-comment": "error",
+        "space-infix-ops": "error",
+        "indent": "error",
+        "brace-style": [
+            "error"
+        ],
+        "dot-location": [
+            "error",
+            "property"
+        ],
+        "no-multi-spaces": "error"
+    }
+}
