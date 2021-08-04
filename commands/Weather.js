@@ -5,6 +5,7 @@ module.exports = {
     name:'Weather Forecast',
     aliases:['havadurumu'],
     usage:'.havadurumu',
+    guildOnly:true,
     execute(message, args){
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${args}&appid=${WEATHER_API_KEY}&units=metric&lang=tr`;
         fetch(url)

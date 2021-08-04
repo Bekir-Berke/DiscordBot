@@ -4,6 +4,7 @@ module.exports = {
     name:'Covid',
     aliases:['covid'],
     usage:'.covid',
+    guildOnly:true,
     execute(message, args){
         let url = `https://disease.sh/v3/covid-19/countries/${args}`;
         fetch(url)

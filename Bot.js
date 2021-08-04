@@ -28,7 +28,10 @@ client.on('messageCreate', msg => {
     const commandName = args.shift().toLowerCase();
     const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
     if (!command) return;
-    if (command.args && !args.length) return msg.reply('You didnt provide arguments');
+    if (command.args && !args.length) return msg.reply('Argüman tanımlamadın');
+    if(command.guildOnly && msg.channel.type !== 'GUILD_TEXT'){
+        return msg.author.send('Bu komut sadece sunucu içerisinde çalışır');
+    }
 
     try {
         command.execute(msg, args);

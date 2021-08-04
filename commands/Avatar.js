@@ -3,6 +3,7 @@ module.exports = {
     name:'Avatar',
     aliases:['avatar'],
     usage:'.avatar',
+    guildOnly:true,
     execute(message){
         let avatarEmbed = new MessageEmbed()
             .setColor('RANDOM')

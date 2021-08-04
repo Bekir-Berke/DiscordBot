@@ -4,6 +4,7 @@ module.exports = {
     name:'Reddit memes',
     aliases:['reddit'],
     usage:'.reddit',
+    guildOnly:true,
     execute(message,args){
         if(args !== null){
             let url = `https://meme-api.herokuapp.com/gimme/${args}`;
