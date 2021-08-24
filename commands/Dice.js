@@ -1,10 +1,10 @@
+const{SlashCommandBuilder} = require('@discordjs/builders');
 module.exports = {
-    name: 'Dice',
-    aliases: ['zarat'],
-    usage: '.zarat',
-    guildOnly:true,
-    execute(message){
+    data: new SlashCommandBuilder()
+        .setName('zarat')
+        .setDescription('1 ve 12 arasında bir sayı gösterir'),
+    async execute(interaction){
         let number = Math.floor((Math.random() * 12) + 1).toString();
-        return message.reply(number);
+        await interaction.reply(number);
     }
 };

@@ -1,15 +1,15 @@
 const{MessageEmbed} = require('discord.js');
+const {SlashCommandBuilder} = require('@discordjs/builders');
 module.exports = {
-    name:'Avatar',
-    aliases:['avatar'],
-    usage:'.avatar',
-    guildOnly:true,
-    execute(message){
+    data: new SlashCommandBuilder()
+        .setName('avatar')
+        .setDescription('avatarını gösterir'),
+    async execute(interaction){
         let avatarEmbed = new MessageEmbed()
             .setColor('RANDOM')
-            .setAuthor(`${message.author.tag} kullanıcısının avatarı`)
-            .setImage(message.author.displayAvatarURL({format: 'png', dynamic: true, size: 2048}))
+            .setAuthor(`${interaction.user.tag} kullanıcısının avatarı`)
+            .setImage(interaction.user.displayAvatarURL({format: 'png', dynamic: true, size: 2048}))
             .setTimestamp();
-        return message.reply({embeds:[avatarEmbed]});
+        await interaction.reply({embeds:[avatarEmbed]});
     }
 };
