@@ -20,7 +20,6 @@ const deploy = () => {
                 Routes.applicationGuildCommands(clientId, guildId),
                 {body: commands}
             );
-
             console.log('Successfully registered application commands.');
         } catch (error){
             console.error(error);
