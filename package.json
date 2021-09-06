@@ -15,7 +15,7 @@
     "chalk": "^4.1.2",
     "discord.js": "^13.0.0-dev.t1627831263.774f5b7",
     "moment": "^2.29.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.0.0",
     "webscrape": "^2.0.1"
   },
   "devDependencies": {
