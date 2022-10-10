@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chalk": "^5.1.0",
     "discord.js": "^13.0.0-dev.t1627831263.774f5b7",
     "moment": "^2.29.1",
     "node-fetch": "^3.0.0",
